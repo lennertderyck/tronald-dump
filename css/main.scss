@@ -113,7 +113,7 @@ body {
             background-color: #1C2733;
         }
         
-        &:first-child {
+        &:nth-child(1) {
             border-radius: 25px 25px 0px 0px;
         }
         
