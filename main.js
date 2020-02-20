@@ -56,8 +56,6 @@ function loadQuotes(n) {
     for (let i = 0; i < n; i++) {
         fetchDataFromURl('https://tronalddump.io/random/quote', 'json');
     }
-    
-    
 }
 loadQuotes(5);
 
@@ -65,11 +63,9 @@ loadQuotes(5);
 console.log(new Date("July 21, 1983 01:15:00:195").getMilliseconds());
 
 function reloadQuotes(n) {
-    console.log('euuhjjj');
+    setTimeout(() => {window.scrollTo({top: 0, behavior: 'smooth'})}, 1000);
     let quoteElements = document.querySelector('[data-label="quotes"]').getElementsByClassName('quote');
-    // const quoteElementsSize = Object.keys(quoteElements).length;
-    console.log('euuhjjj');
-    console.log(n);
+
     for (let i = 0; i < n; i++) {
         quoteElements[i].setAttribute('style', `animation-delay: ${.2*i}s`); 
     }
@@ -82,11 +78,11 @@ function reloadQuotes(n) {
         }
     }, 700);
     
-    
-    
     quoteElements[4].addEventListener('animationend', function() {
         loadQuotes(n);
-    })
+        // window.scrollTo({top: window.innerHeight, behavior: 'smooth'});
+    });
+    
 }
 
 function timeDiff(input) {    
