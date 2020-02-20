@@ -89,8 +89,8 @@ body {
                 }
                 
                 &-verified-icon {
-                    width: 18.75px;
-                    height: 18.75px;
+                    min-width: 18.75px;
+                    min-height: 18.75px;
                     fill: white;
                     margin-right: 6px;
                 }
@@ -142,20 +142,27 @@ body {
     }
 }
 
+@media (min-width: 490px) {
+    body .quote .row .profile-detail {
+        max-width: 353px;
+    }
+}
+
 @media (min-width: 576px) {
-    .profile-detail {
+    body .quote .row .profile-detail {
         max-width: 390px;
     }
 }
 
-
 @media (min-width: 768px) {
-    .profile-detail {
-        max-width: 400px;
+    body .quote .row .profile-detail {
+        max-width: unset;
     }
 }
 
-@media (min-width: 992px) {}
-
-@media (min-width: 1200px) {}
+@media (min-width: 992px) {
+    body .quote .row .profile-detail {
+        max-width: unset;
+    }
+}
 

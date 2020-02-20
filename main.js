@@ -26,7 +26,7 @@ let tempStr = '', quoteContent = '', quoteIndex = 0;
 function generateQuoteUI(result) {
     let div = document.createElement('a');
     div.classList.add('quote', 'animated','fadeInUp', 'faster');
-    div.href = `https://www.google.com/search?q=site:twitter.com ${result.value}`
+    div.href = `${result._links.self.href}`
     div.target = '_blank'
     // div.setAttribute('style', `transition-dalay: ${.2}s`);
     div.innerHTML = `
