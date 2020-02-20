@@ -1,9 +1,13 @@
+* {
+    box-sizing: border-box;
+}
+
 html {
     height: 100%;
 }
 
 body {
-    padding: 30px 0px;
+    padding: 30px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +36,7 @@ body {
     
     .quote {
         display: block;
-        width: 598px;
+        max-width: 598px;
         padding: 15px;
         border: 1px solid #323A41;
         margin-bottom: -1px;
@@ -41,6 +45,8 @@ body {
         
         .row {
             display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
             
             .profile {
                 width: auto;
@@ -57,12 +63,28 @@ body {
                     margin-top: 0px;
                     margin-bottom: 3px;
                     
+                    max-width: 214px;
+                    
                     &-name {
+                        display: block;
                         margin-right: 4px; 
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
                     }
                     
-                    &-username, .time {
+                    &-username {
+                        display: block;
                         color: #8899a6;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                    }
+                    
+                    .time {
+                        display: block;
+                        color: #8899a6;
+                        white-space: nowrap;
                     }
                 }
                 
@@ -119,4 +141,21 @@ body {
         margin-top: 30px;
     }
 }
+
+@media (min-width: 576px) {
+    .profile-detail {
+        max-width: 390px;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .profile-detail {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {}
 
